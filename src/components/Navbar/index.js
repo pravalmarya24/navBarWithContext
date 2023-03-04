@@ -22,10 +22,7 @@ const NavBar = () => (
       const onChangeTheme = () => toggleTheme()
 
       return (
-        <nav
-          className={`navbar-container ${navbarBorderColor}`}
-          data-testid="theme"
-        >
+        <nav className={`navbar-container ${navbarBorderColor}`}>
           <div className="website-logo-container">
             <img
               src={webSiteLogoImg}
@@ -48,7 +45,12 @@ const NavBar = () => (
             </ul>
           </div>
           <div className="theme-container">
-            <button type="button" className="theme-btn" onClick={onChangeTheme}>
+            <button
+              type="button"
+              className="theme-btn"
+              onClick={onChangeTheme}
+              data-testid="theme"
+            >
               <img src={themeImg} alt="theme" className="theme-img-size" />
             </button>
           </div>
